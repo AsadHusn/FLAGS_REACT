@@ -11,7 +11,7 @@ export async function fetchAllCountries() {
     const { status, statusText } = error.response;
     throw json(
       {
-        page: "home",
+        page: "home", // used in error boundary
         message: error.message,
       },
       {
@@ -29,7 +29,7 @@ export async function fetchCountryDetails({ params }) {
     const { status, statusText } = error.response;
     throw json(
       {
-        page: "details",
+        page: "details", // used in error boundary
         message: error.message,
       },
       {
@@ -47,7 +47,7 @@ export async function fetchCountryByCode(code) {
     const { status, statusText } = error.response;
     throw json(
       {
-        page: "details",
+        page: "details", // used in error boundary
         message: error.message,
       },
       {
